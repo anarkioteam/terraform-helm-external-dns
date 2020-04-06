@@ -1,16 +1,16 @@
-variable "external_dns_namespace" {
+variable "helm_external_dns_namespace" {
   description = "Namespace to release ExternalDNS into"
   type        = string
   default     = "external-dns"
 }
 
-variable "external_dns_helm_chart_version" {
+variable "helm_external_dns_chart_version" {
   description = "Helm chart version to use for ExternalDNS"
   type        = string
   default     = ""
 }
 
-variable "external_dns_eks_iam_role_arn" {
-  description = "IAM service account role arn for ExternalDNS"
+variable "eks_iam_external_dns_role_name" {
+  description = "IAM EKS service account role name for ExternalDNS"
   type        = string
 }

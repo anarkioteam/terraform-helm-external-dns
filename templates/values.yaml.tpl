@@ -3,4 +3,4 @@ aws:
 
 rbac:
   serviceAccountAnnotations:
-    eks.amazonaws.com/role-arn: ${ external_dns_eks_iam_role_arn }
+    eks.amazonaws.com/role-arn: ${ eks_iam_external_dns_role_arn }
