@@ -1,6 +1,6 @@
 # terraform-helm-external-dns
 
-A Terraform module for deploying [external-dns](https://github.com/kubernetes-sigs/external-dns) via Helm.
+A Terraform module for deploying [ExternalDNS](https://github.com/kubernetes-sigs/external-dns) via Helm.
 
 ## Requirements
 
@@ -20,11 +20,11 @@ A Terraform module for deploying [external-dns](https://github.com/kubernetes-si
 
 ## Inputs
 
-| Name                            | Description                                   | Type     | Default          | Required |
-| ------------------------------- | --------------------------------------------- | -------- | ---------------- | :------: |
-| external_dns_helm_chart_version | Helm chart version to use for external-dns    | `string` | `""`             |    no    |
-| external_dns_namespace          | Namespace to release external-dns into        | `string` | `"external-dns"` |    no    |
-| external_dns_eks_iam_role_arn   | IAM service account role arn for external-dns | `string` | n/a              |   yes    |
+| Name                            | Description                                  | Type     | Default          | Required |
+| ------------------------------- | -------------------------------------------- | -------- | ---------------- | :------: |
+| external_dns_eks_iam_role_arn   | IAM service account role arn for ExternalDNS | `string` | n/a              |   yes    |
+| external_dns_helm_chart_version | Helm chart version to use for ExternalDNS    | `string` | `""`             |    no    |
+| external_dns_namespace          | Namespace to release ExternalDNS into        | `string` | `"external-dns"` |    no    |
 
 ## Outputs
 
