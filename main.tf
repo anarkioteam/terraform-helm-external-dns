@@ -9,7 +9,7 @@ resource "helm_release" "external_dns" {
     templatefile(
       "${path.module}/templates/values.yaml.tpl",
       {
-        "aws_region"                    = data.aws_region.current
+        "aws_region"                    = data.aws_region.current.name
         "eks_iam_external_dns_role_arn" = data.aws_iam_role.external_dns.arn
       }
     )
