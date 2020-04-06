@@ -5,6 +5,8 @@ resource "kubernetes_namespace" "external_dns" {
 }
 
 resource "helm_release" "external_dns" {
+  depends_on = [kubernetes_namespace.external_dns]
+
   name       = "external-dns"
   repository = data.helm_repository.bitnami.metadata[0].name
   chart      = "external-dns"
