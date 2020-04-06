@@ -1,8 +1,14 @@
+resource "kubernetes_namespace" "external_dns" {
+  metadata {
+    name = var.kubernetes_external_dns_namespace
+  }
+}
+
 resource "helm_release" "external_dns" {
   name       = "external-dns"
   repository = data.helm_repository.bitnami.metadata[0].name
   chart      = "external-dns"
-  namespace  = var.helm_external_dns_namespace
+  namespace  = var.kubernetes_external_dns_namespace
   version    = var.helm_external_dns_chart_version == "" ? null : var.helm_external_dns_chart_version
 
   values = [

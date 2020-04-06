@@ -1,4 +1,4 @@
-variable "helm_external_dns_namespace" {
+variable "kubernetes_external_dns_namespace" {
   description = "Namespace to release ExternalDNS into"
   type        = string
   default     = "external-dns"

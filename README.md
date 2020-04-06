@@ -13,18 +13,19 @@ A Terraform module for deploying [ExternalDNS](https://github.com/kubernetes-sig
 
 ## Providers
 
-| Name | Version |
-| ---- | ------- |
-| aws  | ~> 2.56 |
-| helm | ~> 1.1  |
+| Name       | Version |
+| ---------- | ------- |
+| aws        | ~> 2.56 |
+| helm       | ~> 1.1  |
+| kubernetes | n/a     |
 
 ## Inputs
 
-| Name                            | Description                                       | Type     | Default          | Required |
-| ------------------------------- | ------------------------------------------------- | -------- | ---------------- | :------: |
-| eks_iam_external_dns_role_name  | IAM EKS service account role name for ExternalDNS | `string` | n/a              |   yes    |
-| helm_external_dns_chart_version | Helm chart version to use for ExternalDNS         | `string` | `""`             |    no    |
-| helm_external_dns_namespace     | Namespace to release ExternalDNS into             | `string` | `"external-dns"` |    no    |
+| Name                              | Description                                       | Type     | Default          | Required |
+| --------------------------------- | ------------------------------------------------- | -------- | ---------------- | :------: |
+| eks_iam_external_dns_role_name    | IAM EKS service account role name for ExternalDNS | `string` | n/a              |   yes    |
+| helm_external_dns_chart_version   | Helm chart version to use for ExternalDNS         | `string` | `""`             |    no    |
+| kubernetes_external_dns_namespace | Namespace to release ExternalDNS into             | `string` | `"external-dns"` |    no    |
 
 ## Outputs
 
